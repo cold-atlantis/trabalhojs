@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Banco Sanca</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <style type="text/css">
+  body {
+    padding-top: 5rem;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(bg.png) bottom right fixed no-repeat, url(BS.png) bottom right fixed no-repeat;
+
+background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%), url(BS.png) bottom right fixed no-repeat;
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7))), url(BS.png) bottom right fixed no-repeat;
+
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url(BS.png) bottom right fixed no-repeat;
+
+background: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url(BS.png) bottom right fixed no-repeat;
+
+background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url(BS.png) bottom right fixed no-repeat;
+
+background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url(BS.png) bottom right fixed no-repeat;
+
+    
+  }
+
+</style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">
+      <img src="BS.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Banco Sanca
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbars">
+      <ul class="navbar-nav row px-2 px-md-0 ml-md-auto mr-1" id="menu-operacoes">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Abertura de conta</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operações financeiras</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">Saque</a>
+            <a class="dropdown-item" href="#">Depósito</a>
+            <a class="dropdown-item" href="#">Transferência</a>
+            <a class="dropdown-item" href="#">Saldo</a>
+            <a class="dropdown-item" href="#">Extrato</a>
+            <a class="dropdown-item" href="#">Aumentar Limite</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Total do Banco</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+
+
+
+
+    <div class="row mb-5" id="home">
+      <div class="col text-center">
+        <h1>Bem-vindo ao Banco Sanca!</h1>
+        <p class="lead">Utilize o menu acima para realizar as operações desejadas.</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row mb-5" id="conta">
+      <div class="col">
+        <h1>Abertura de Conta Corrente</h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="conta-num-conta">Número da conta</label>
+            <input type="text" class="form-control" id="conta-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="conta-nome">Nome completo</label>
+            <input type="text" class="form-control" id="conta-nome" placeholder="Digite o nome completo">
+          </div>
+          <div class="form-group">
+            <label for="conta-senha">Senha</label>
+            <input type="password" class="form-control" id="conta-senha" placeholder="Digite uma senha">
+          </div>
+          <div class="form-group">
+            <label for="conta-senha-repetir">Confirmar senha</label>
+            <input type="password" class="form-control" id="conta-senha-repetir" placeholder="Repita a senha">
+          </div>
+          <button type="button" id="conta-btn" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row mb-5" id="saque">
+      <div class="col">
+        <h1>Operação financeira: <strong>Saque</strong></h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="saque-data">Data da operação</label>
+            <input type="text" required class="form-control" data-mask="00/00/0000" id="saque-data">
+          </div>
+          <div class="form-group">
+            <label for="saque-num-conta">Número da conta</label>
+            <input type="text" required class="form-control" id="saque-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="saque-senha">Senha</label>
+            <input type="password" required class="form-control" id="saque-senha" placeholder="Digite a senha da sua conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="saque-valor">Valor do Saque</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+              </div>
+              <input type="text" required class="form-control" data-mask="#.##0,00" data-mask-reverse="true" id="saque-valor">
+            </div>
+          </div>
+          <button type="button" id="saque-btn" class="btn btn-primary">Sacar</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row mb-5" id="deposito">
+      <div class="col">
+        <h1>Operação financeira: <strong>Depósito</strong></h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="deposito-data">Data da operação</label>
+            <input type="text" required class="form-control" data-mask="00/00/0000" id="deposito-data">
+          </div>
+          <div class="form-group">
+            <label for="deposito-num-conta">Número da conta</label>
+            <input type="text" required class="form-control" id="deposito-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="deposito-valor">Valor do Depósito</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+              </div>
+              <input type="text" required class="form-control" data-mask="#.##0,00" data-mask-reverse="true" id="deposito-valor">
+            </div>
+          </div>
+          <button type="button" id="deposito-btn" class="btn btn-primary">Depositar</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="row mb-5" id="transferencia">
+      <div class="col">
+        <h1>Operação financeira: <strong>Transferência</strong></h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="transferencia-data">Data da operação</label>
+            <input type="text" required class="form-control" data-mask="00/00/0000" id="transferencia-data">
+          </div>
+          <div class="form-group">
+            <label for="transferencia-num-conta">Número da conta</label>
+            <input type="text" required class="form-control" id="transferencia-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="transferencia-senha">Senha</label>
+            <input type="password" required class="form-control" id="transferencia-senha" placeholder="Digite a senha da sua conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="transferencia-num-conta-outra">Número da conta para quem deseja transferir</label>
+            <input type="text" required class="form-control" id="transferencia-num-conta-outra" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="transferencia-valor">Valor do Saque</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+              </div>
+              <input type="text" required class="form-control" data-mask="#.##0,00" data-mask-reverse="true" id="transferencia-valor">
+            </div>
+          </div>
+          <button type="button" id="transferencia-btn" class="btn btn-primary">Transferir</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="row mb-5" id="saldo">
+      <div class="col">
+        <h1>Operação financeira: <strong>Consulta de Saldo</strong></h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="saldo-num-conta">Número da conta</label>
+            <input type="text" required class="form-control" id="saldo-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="saldo-senha">Senha</label>
+            <input type="password" required class="form-control" id="saldo-senha" placeholder="Digite a senha da sua conta corrente">
+          </div>
+          <button type="button" id="saldo-btn" class="btn btn-primary">Consultar</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row mb-5" id="extrato">
+      <div class="col">
+        <h1>Operação financeira: <strong>Consulta de Exrato</strong></h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="extrato-num-conta">Número da conta</label>
+            <input type="text" required class="form-control" id="extrato-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="extrato-senha">Senha</label>
+            <input type="password" required class="form-control" id="extrato-senha" placeholder="Digite a senha da sua conta corrente">
+          </div>
+          <button type="button" id="extrato-btn" class="btn btn-primary">Consultar</button>
+        </form>
+
+        <div id="extrato-lista-operacoes" class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row mb-5" id="limite">
+      <div class="col">
+        <h1>Operação financeira: <strong>Aumentar Limite</strong></h1>
+        <form class="col-12 col-sm-12 col-md-4">
+          <div class="form-group">
+            <label for="limite-num-conta">Número da conta</label>
+            <input type="text" required class="form-control" id="limite-num-conta" placeholder="Digite o número da conta corrente">
+          </div>
+          <div class="form-group">
+            <label for="limite-senha">Senha</label>
+            <input type="password" required class="form-control" id="limite-senha" placeholder="Digite a senha da sua conta corrente">
+          </div>
+          <button type="button" id="limite-btn" class="btn btn-primary">Aumentar</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+  </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+
+      <script type="text/javascript" src="trabalho02-funcoes.js"></script>
+    </body>
+    </html>
